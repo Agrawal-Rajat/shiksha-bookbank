@@ -1,0 +1,249 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://wallpapercave.com/wp/wp7373448.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for better readability */
+  z-index: -1;
+}
+
+h2 {
+  font-size: 36px;
+  color: #ecf0f1;
+  margin: 60px 0 40px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Main Container */
+#bookList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px 50px;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px; /* To prevent cards from becoming too stretched on large screens */
+  width: 100%;
+}
+
+/* Book Card Styling */
+.book-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(33.33% - 30px); /* 3 per row on desktop */
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.book-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+}
+
+/* Book Cover Image */
+.book-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover; /* Crop and fill the space while maintaining aspect ratio */
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.book-card:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Title */
+.book-card h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Author */
+.book-card p {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin: 4px 0;
+  text-align: center;
+}
+
+/* Description */
+.book-card p.description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin: 12px 0;
+  height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+/* Price */
+.book-card .price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #27ae60;
+  margin-top: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Back to Home Button */
+.back-home {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff; /* Ensure text color is white */
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  z-index: 9999;
+  transition: background 0.3s;
+}
+
+.back-home:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.back-home i {
+  margin-right: 6px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  /* Book list layout: Stack in column */
+  #bookList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* Center the cards horizontally */
+    gap: 20px;               /* Space between cards */
+    padding: 0 15px;         /* Inner padding on sides */
+  }
+
+  /* Book card styling for mobile */
+  .book-card {
+    width: 100%;             /* Full width inside container */
+    max-width: 400px;        /* Optional cap for large phones/tablets */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* Book cover image */
+  .book-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  /* Book title */
+  .book-card h4 {
+    font-size: 18px;
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  /* Author and description text */
+  .book-card p {
+    font-size: 14px;
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  /* Description block spacing */
+  .book-card p.description {
+    height: auto;
+    margin-top: 10px;
+  }
+
+  /* Price styling */
+  .book-card .price {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 12px;
+    color: #27ae60;
+    text-align: center;
+  }
+}
+
+/* Base button styling */
+.book-card button {
+  padding: 10px 20px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Buy Now Button */
+.buy-btn {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: white;
+}
+
+.buy-btn:hover {
+  background: linear-gradient(135deg, #66BB6A, #388E3C);
+  transform: translateY(-2px);
+}
+
+/* Delete Button */
+.delete-btn {
+  background: linear-gradient(135deg, #e53935, #b71c1c);
+  color: white;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #ef5350, #c62828);
+  transform: translateY(-2px);
+}
+

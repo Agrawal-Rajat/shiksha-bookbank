@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Book</title>
+  <!-- <link rel="stylesheet" href="../styles/dashboard.css"> -->
+  <link rel="stylesheet" href="../styles/upload.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <a href="../pages/dashboard.html" class="back-home"><i class="fas fa-arrow-left"></i> Dashboard</a>
+
+  <!-- Upload Book Form -->
+  <form id="uploadForm">
+    <h3>Upload Your Book</h3>
+
+    <!-- Book Title -->
+    <div class="form-group">
+      <input type="text" id="bookTitle" placeholder=" " required />
+      <label for="bookTitle">Book Title</label>
+    </div>
+
+    <!-- Author -->
+    <div class="form-group">
+      <input type="text" id="bookAuthor" placeholder=" " required />
+      <label for="bookAuthor">Author</label>
+    </div>
+
+    <!-- Book Description -->
+    <div class="form-group">
+      <textarea id="bookDesc" rows="4" placeholder=" "></textarea>
+      <label for="bookDesc">Description</label>
+    </div>
+
+    <!-- Book Price -->
+    <div class="form-group">
+      <input type="number" id="bookPrice" placeholder=" " required />
+      <label for="bookPrice">Price in ₹</label>
+    </div>
+
+    <!-- Book Cover Image -->
+    <div class="form-group">
+      <input type="file" id="bookCover" accept="image/*" required />
+      <label for="bookCover">Upload Cover Image</label>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit">Upload Book</button>
+  </form>
+
+  <script src="../scripts/upload.js"></script>
+
+</body>
+</html>

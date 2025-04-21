@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate a Book</title>
+  <link rel="stylesheet" href="../styles/donate.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i>Home</a>
+
+  <section class="form-section">
+    <div class="form-container">
+      <h2>Donate a Book</h2>
+      <form id="donateForm">
+        <div class="input-group">
+          <label for="donorName">Your Name</label>
+          <input type="text" id="donorName" placeholder="Enter your name" required />
+        </div>
+        <div class="input-group">
+          <label for="bookTitle">Book Title</label>
+          <input type="text" id="bookTitle" placeholder="Enter book title" required />
+        </div>
+        <div class="input-group">
+          <label for="bookAuthor">Author</label>
+          <input type="text" id="bookAuthor" placeholder="Enter author name" required />
+        </div>
+        <div class="input-group">
+          <label for="bookImage">Upload Book Image</label>
+          <input type="file" id="bookImage" accept="image/*" />
+        </div>
+        <button type="submit" class="btn">Donate</button>
+      </form>
+      <p><a href="#bookList" class="link">See donated books below</a></p>
+    </div>
+  </section>
+
+  <section id="bookList" class="donated-section">
+    <h2>Donated Books</h2>
+    <div class="card-container" id="bookCards">
+      <!-- Donated book cards will be inserted here via JS -->
+    </div>
+  </section>
+
+  <script src="../scripts/donate.js"></script>
+</body>
+</html>

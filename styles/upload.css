@@ -1,0 +1,157 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background styling */
+body {
+  background: url('../assets/uplaodbg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+}
+
+  /* Back to Home Button */
+  .back-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff; /* Ensure text color is white */
+    background: transparent;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    z-index: 9999;
+    transition: background 0.3s;
+  }
+
+  
+  .back-home i {
+    margin-right: 6px;
+  }
+
+
+
+/* Upload form container */
+#uploadForm {
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  padding: 30px 25px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 0, 255, 0.5); /* Magenta glow shadow */
+  max-width: 500px;
+  width: 100%;
+  transition: transform 0.3s ease;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hover effect on form */
+#uploadForm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 0, 255, 0.7); /* Stronger magenta glow effect */
+}
+
+/* Form header */
+#uploadForm h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: black; /* Softer purple color */
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Input fields */
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  background: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effect on input fields */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ba68c8; /* Lighter purple border color */
+  background: #fff;
+  box-shadow: 0 0 8px rgba(186, 104, 200, 0.8); /* Lighter purple glow on focus */
+}
+
+/* Floating label */
+.form-group label {
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  background: transparent; /* Made the label background transparent */
+  padding: 0 5px;
+  color: #888;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #ba68c8; /* Lighter purple color for label */
+}
+
+/* Button */
+#uploadForm button {
+  background: #ba68c8; /* Lighter purple button background */
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Button hover effect */
+#uploadForm button:hover {
+  background: #9c4dcc; /* Slightly darker purple for hover effect */
+  box-shadow: 0 0 10px rgba(186, 104, 200, 0.6); /* Glow effect on hover */
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 600px) {
+  #uploadForm {
+      padding: 25px 20px;
+      margin-top: 30px;
+  }
+
+  #uploadForm h3 {
+      font-size: 20px;
+  }
+
+  #uploadForm button {
+      font-size: 15px;
+  }
+}

@@ -1,0 +1,150 @@
+/* General Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  /* Back to Home Button */
+  .back-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff; /* Ensure text color is white */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    z-index: 9999;
+    transition: background 0.3s;
+  }
+  
+  .back-home:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .back-home i {
+    margin-right: 6px;
+  }
+  
+  /* Form Section with Background Image */
+  .form-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../assets/auth_bg.jpg') no-repeat center center/cover;
+    padding: 2rem;
+    position: relative;
+  }
+  
+  .form-container {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Form Title */
+  .form-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  /* Input Fields */
+  .input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  .input-group label {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fefefe;
+    box-sizing: border-box;
+  }
+  
+  /* Submit Button */
+  .btn {
+    background-color: #000;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 0.1rem;
+  }
+  
+  .btn:hover {
+    background-color: #333;
+  }
+  
+  /* Links */
+  .link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Paragraph Margin */
+  .form-container p {
+    margin-top: 1.5rem;
+  }
+  
+  /* Responsive Fix for Mobile */
+  @media (max-width: 768px) {
+    .form-section {
+      padding-top: 5rem; /* Ensure space above form to avoid overlap with back button */
+    }
+  
+    .back-home {
+      background: #000; /* Set a black background on mobile */
+      box-shadow: none;
+      color: #fff; /* Keep text color white */
+      font-weight: normal;
+      padding: 8px 12px; /* Adjust padding to maintain button size */
+      font-size: 1rem;
+      top: 15px;
+      left: 15px;
+    }
+  
+    .back-home:hover {
+      background: #333; /* Darker shade on hover */
+    }
+  }
+  

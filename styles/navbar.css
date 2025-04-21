@@ -1,0 +1,95 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #000;
+  color: #fff;
+  padding: 0 1.5rem;
+  height: 60px; /* ✅ Consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  left: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 60px; /* ✅ Align text with navbar */
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  transition: max-height 0.4s ease-in-out;
+}
+
+/* Hamburger */
+.hamburger {
+  position: absolute;
+  right: 1.5rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* Nav Link Styling */
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.95rem;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+/* Toggle checkbox hidden */
+.menu-toggle {
+  display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px; /* ✅ Exactly below navbar */
+    left: 0;
+    right: 0;
+    background: #000;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+    transition: max-height 0.4s ease-in-out, padding 0.3s ease;
+  }
+
+  .menu-toggle:checked + .hamburger + .nav-links {
+    max-height: 500px;
+    padding: 1rem 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

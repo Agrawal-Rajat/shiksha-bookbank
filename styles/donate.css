@@ -1,0 +1,295 @@
+/* General Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d3d3d3; /* Light grey background */
+    color: #333;
+}
+
+  
+  /* Back to Home Button */
+  .back-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    z-index: 9999;
+    transition: background 0.3s;
+  }
+  
+  .back-home:hover {
+    background: white;
+    cursor: pointer;
+  }
+  
+  .back-home i {
+    margin-right: 6px;
+  }
+  
+  /* Form Section with Background Image */
+  .form-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f') no-repeat center center/cover;
+    padding: 2rem;
+    position: relative;
+    flex-direction: column;
+  }
+  
+  .form-container {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Form Title */
+  .form-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  /* Input Fields */
+  .input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  .input-group label {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fefefe;
+    box-sizing: border-box;
+  }
+  
+  /* Submit Button */
+  .btn {
+    background-color: #000;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 0.1rem;
+  }
+  
+  .btn:hover {
+    background-color: #333;
+  }
+  
+  /* Links */
+  .link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Paragraph Margin */
+  .form-container p {
+    margin-top: 1.5rem;
+  }
+  
+  /* Responsive Fix for Mobile */
+  @media (max-width: 768px) {
+    .form-section {
+      padding-top: 5rem;
+    }
+  
+    .back-home {
+      background: #000;
+      box-shadow: none;
+      color: #fff;
+      font-weight: normal;
+      padding: 8px 12px;
+      font-size: 1rem;
+      top: 15px;
+      left: 15px;
+    }
+  
+    .back-home:hover {
+      background: #333;
+    }
+  }
+
+
+
+/* General Section Styling */
+.donated-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #d3d3d3, #b0b0b0); /* Gradient from light grey to darker grey */
+    text-align: center;
+}
+
+
+.donated-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Donated Book Card */
+.donated-card {
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #e0e0e0; /* Light grey border for subtle definition */
+    border-radius: 12px; /* Slightly rounded edges */
+    width: 300px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for a subtle elevation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #333; /* Dark text for readability */
+    text-align: left;
+    position: relative;
+    margin-bottom: 2rem; /* Spacing below each card */
+}
+
+.donated-card:hover {
+    transform: translateY(-8px); /* Slight lift on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+}
+
+/* Hover effect for card */
+.donated-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.donated-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007BFF; /* A bright color for the title */
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.donated-card p {
+    font-size: 1rem;
+    color: #555; /* Softer grey text */
+    margin-bottom: 1.5rem;
+}
+
+.donated-card .donor {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #007BFF; /* Blue color for donor's name */
+    margin-bottom: 0.5rem;
+}
+
+.donated-card .book-title {
+    font-size: 1.2rem;
+    color: #ffcc00; /* Bright yellow/golden color for book title */
+}
+
+.donated-card .author {
+    font-size: 1rem;
+    color: #777; /* A lighter grey for the author's name */
+    font-style: italic;
+}
+
+.donated-card img.book-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+
+/* Border Color */
+.donated-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #777;
+    border-radius: 15px;
+    pointer-events: none;
+    z-index: -1; /* Ensures border doesn't overlap card content */
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-top: 1rem;
+    display: inline-block; /* Ensure the button aligns with the content */
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .donated-card {
+        width: 100%;
+        max-width: 350px;
+        padding: 1.5rem;
+    }
+
+    .donated-section h2 {
+        font-size: 2rem;
+    }
+}
+
+.donated-card img.book-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+    

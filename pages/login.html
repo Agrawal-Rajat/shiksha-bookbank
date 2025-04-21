@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Shiksha BookBank</title>
+    <link rel="stylesheet" href="../styles/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Login Form Section -->
+    <section class="form-section">
+        <a href="../pages/index.html" class="back-home"><i class="fas fa-arrow-left"></i> Home</a>
+        <div class="form-container">
+            <h2>Login to Shiksha BookBank</h2>
+
+            <!-- Login Form -->
+            <form id="loginForm" method="POST">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+                <p id="error-message" style="color: red; display: none;">Invalid email or password. Please try again.</p>
+            </form>
+
+            <p>Don't have an account? <a href="signup.html" class="link">Sign Up</a></p>
+        </div>
+    </section>
+
+    <!-- Link to External JavaScript -->
+    <script src="../scripts/login.js"></script>
+
+</body>
+
+</html>
