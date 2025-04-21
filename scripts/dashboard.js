@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('logoutButton').addEventListener('click', function () {
         // Clear sessionStorage and redirect to login page
         sessionStorage.removeItem('loggedInUser');
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
     });
 });
 
